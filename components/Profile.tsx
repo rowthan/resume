@@ -1,8 +1,10 @@
 import qrCodePrint from "../img/qrcode.png";
 import Image from "next/image";
-
+import {profile} from "@/data/profile";
+import app from "@/components/App";
 
 export default function Profile() {
+    const {contacts} = profile
     return (
         <nav className="basic-info">
           <div className="left" style={{}}>
@@ -19,14 +21,24 @@ export default function Profile() {
               联系方式
             </header>
             <ul>
-              <li><a href= "mailto:rowthan@icloud.com">rowthan@icloud.com</a></li>
-              <li className="onlyprint">17611619330</li>
-              <li className="onlyprint"> <a href="https://cv.logike.cn">cv.logike.cn</a> </li>
-              <li className="noprint">
-                <a href="https://github.com/rowthan">GitHub</a>
-                &nbsp;&nbsp;
-                <a href="https://juejin.im/user/588a23d0128fe10065061eab">掘金</a>
-              </li>
+                {
+                    contacts.map((contact)=>(
+                        <li className={contact.className||''}>
+                            {
+                                contact.link ?
+                                    <a href={contact.link} target={'_blank'}>{contact.name}</a>:
+                                    <span>{contact.name}</span>
+                            }
+                        </li>
+                    ))
+                }
+              {/*<li><a href= "mailto:rowthan@icloud.com">rowthan@icloud.com</a></li>*/}
+              {/*<li className="onlyprint">17611619330</li>*/}
+              {/*<li className="noprint">*/}
+              {/*  <a href="https://github.com/rowthan">GitHub</a>*/}
+              {/*  &nbsp;&nbsp;*/}
+              {/*  <a href="https://juejin.im/user/588a23d0128fe10065061eab">掘金</a>*/}
+              {/*</li>*/}
             </ul>
           </div>
         </nav>

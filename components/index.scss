@@ -390,8 +390,13 @@ input.expander-state{
 
 
 @media print{
-  html{
+  @page {
+    size: A4;
+    margin: 0;
+  }
+  html,body{
     background: #fff;
+    margin:0;
   }
   .noprint{
     display: none;
@@ -407,6 +412,7 @@ input.expander-state{
   }
   .resume-container,.back-page{
     box-shadow: none;
+    width: 100%;
   }
 }
 .project-container{
