@@ -1,7 +1,12 @@
 import React, {Fragment} from "react";
 // import Loadable from "react-loadable";
 
-export const ShowMore =({children, noneAni,style})=>{
+interface Props {
+    children: React.ReactNode
+    noneAni? : boolean,
+}
+
+export const ShowMore =({children, noneAni}: Props)=>{
     const random = Math.random().toString()+'toggle-show';
     return(
         <Fragment>
@@ -11,7 +16,7 @@ export const ShowMore =({children, noneAni,style})=>{
                     <span className='toggle-show-content no-animation'>
                       {children}
                     </span> :
-                    <div className='toggle-show-content' style={style}>
+                    <div className='toggle-show-content'>
                         {children}
                     </div>
             }
