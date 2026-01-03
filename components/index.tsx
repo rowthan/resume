@@ -9,8 +9,8 @@ export const ShowMore =({children, noneAni,style})=>{
             {
                 noneAni!==undefined?
                     <span className='toggle-show-content no-animation'>
-              {children}
-            </span> :
+                      {children}
+                    </span> :
                     <div className='toggle-show-content' style={style}>
                         {children}
                     </div>
@@ -28,13 +28,3 @@ export const ShowMore =({children, noneAni,style})=>{
 //     loading: () => <div>加载中...</div>
 // })
 
-export const AsideButton = ()=>{
-    const download = function(){
-        window.print();
-    }
-    return (
-        <span className="get-resume-container">
-        <button onClick={download}>打印</button>
-      </span>
-    )
-}

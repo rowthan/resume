@@ -1,7 +1,7 @@
 $color-meta:#656565;
 $border-color:#ddd;
 $main-color:#222;
-//@import "font/iconfont.css";
+@import "../font/iconfont.css";
 html {
     font-size: 14px;
     line-height: 1.4em;
@@ -88,7 +88,6 @@ img{
     .right{
       width: 300px;
       ul{
-        padding: 0 16px;
         margin-bottom: 0;
         margin-top: 8px;
       }
@@ -237,7 +236,7 @@ section>p{
   text-align: center;
   min-height: 15px;
   _height: 15px;
-  border-top: 1px solid #ededed;
+  //border-top: 1px solid #ededed;
   margin-top: 50px;
   padding-top: 10px;
   margin-bottom: 10px;
@@ -263,8 +262,8 @@ section>p{
 .time{
   font-size: 12px;
   font-weight: normal;
-  writing-mode: vertical-lr;
-  position: absolute;
+  //writing-mode: vertical-lr;
+  //position: absolute;
   left: -9px;
   top: 36px;
   background: #ffffff;
@@ -434,7 +433,6 @@ input.expander-state{
       display: inline-block;
       color: #fff;
       background: #555555;
-      padding: 0 6px;
       font-size: 12px;
       line-height: 18px;
       vertical-align: bottom;

@@ -1,8 +1,6 @@
-const show = true;
 export const experience = [
     {
         time: '2024-2018',
-        show:show,
         company:'字节跳动 商业化',
         projects:[
             {
@@ -31,7 +29,6 @@ export const experience = [
     },
     {
         time: '2018-2016',
-        show:show,
         company:'中国民航信息网络 B2B',
         projects:[
             {
