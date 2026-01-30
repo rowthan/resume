@@ -16,8 +16,8 @@ export const experience = [
                 ]
             },
             {
-                title:'创作者变现渠道：<a href="https://star.toutiao.com" target=\'_blank\'>星图</a>、<a href="https://creatormarketplace.tiktok.com" target=\'_blank\'>星图国际化</a>、<a\n' +
-                    'href="https://market.toutiao.com" target=\'_blank\'>即合</a>；<a href="https://ad.toutiao.com" target=\'_blank\'>头条广告投放平台</a>',
+                title:'创作者变现渠道：<a href="https://star.toutiao.com" target=\'_blank\'>星图/即合</a>、<a href="https://creatormarketplace.tiktok.com" target=\'_blank\'>星图国际化</a>、' +
+                    '<a href="https://ad.toutiao.com" target=\'_blank\'>头条广告投放平台</a>',
                 items:[
                   '基于echarts数据可视化，针对各项监控数据、指标图表化。基于Vue-i18n多语种优化方案实现。',
                   '负责广告创意生成，图片、文案自动化生成。',

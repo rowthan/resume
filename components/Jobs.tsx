@@ -1,5 +1,5 @@
 import {type ReactNode} from 'react';
-import {ShowMore} from "@/components/index";
+import {ShowMore} from "@/components/ShowMore";
 import Projects from "@/components/Projects";
 import {experience} from "@/data/experience";
 
@@ -28,14 +28,14 @@ export default function Jobs(props: Props) {
                             <div className="projects">
                                 {
                                     exp.projects.map((project) => (
-                                        <dl>
+                                        <dl key={project.title}>
                                             <dt dangerouslySetInnerHTML={{__html: project.title}}>
                                             </dt>
                                             <dd>
                                                 <ol>
                                                     {
-                                                        (project.items || []).map((item) => (
-                                                            <li dangerouslySetInnerHTML={{__html: item}}></li>
+                                                        (project.items || []).map((item,index) => (
+                                                            <li key={index} dangerouslySetInnerHTML={{__html: item}}></li>
                                                         ))
                                                     }
                                                 </ol>
@@ -45,17 +45,17 @@ export default function Jobs(props: Props) {
                                 }
                                 {
                                     exp.moreProject &&
-                                    <ShowMore>
+                                    <ShowMore id='more-project'>
                                         {
                                             exp.moreProject.map((project) => (
-                                                <dl>
+                                                <dl key={project.title}>
                                                     <dt dangerouslySetInnerHTML={{__html: project.title}}>
                                                     </dt>
                                                     <dd>
                                                         <ol>
                                                             {
-                                                                (project.items || []).map((item) => (
-                                                                    <li dangerouslySetInnerHTML={{__html: item}}></li>
+                                                                (project.items || []).map((item,index) => (
+                                                                    <li key={index} dangerouslySetInnerHTML={{__html: item}}></li>
                                                                 ))
                                                             }
                                                         </ol>
