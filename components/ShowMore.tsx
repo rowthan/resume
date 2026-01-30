@@ -4,13 +4,14 @@ import React, {Fragment} from "react";
 interface Props {
     children: React.ReactNode
     noneAni? : boolean,
+    id: string
 }
 
-export const ShowMore =({children, noneAni}: Props)=>{
-    const random = Math.random().toString()+'toggle-show';
+export const ShowMore =({children, noneAni, id}: Props)=>{
+    const random = id || Math.random().toString()+'toggle-show';
     return(
         <Fragment>
-            <input className='expander-state' type="checkbox" id={random}/>
+             <input className='expander-state' type="checkbox" id={random}/>
             {
                 noneAni!==undefined?
                     <span className='toggle-show-content no-animation'>
@@ -22,7 +23,7 @@ export const ShowMore =({children, noneAni}: Props)=>{
             }
 
             <label className='noprint ellipsis-expander' htmlFor={random}>
-
+               
             </label>
         </Fragment>
     )
