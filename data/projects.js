@@ -6,29 +6,29 @@ export const projects = [
         description: "为每一个DOM元素计算唯一可定位标识符，可用于埋点跟踪。零依赖，剥离UI与功能实现，支持装配使用。",
     },
     {
-        name: 'mginx个性化代理解决方案',
-        github: 'https://github.com/rowthan/mginx',
-        img: '',
-        description: 'Node.js 实现的反向代理解决方案，支持单入口多环境代理分发。支持自动环境部署、性能监控、数据分析等功能。'
-    },
-    {
-        name: 'CoPixel视觉校验工具',
-        github: 'https://copixel.bytedance.com',
-        img: '',
-        description: '前端开发对UI稿还原度校准工具，快速定位网页和UI稿的差异。超过400位字节跳动员工正在使用。2019年内部技术学院评选为「2019\n' +
-            '                                        最受欢迎服务」之一。已申请专利。'
-    },
-    {
-        name: 'auto-actor基于UI自动化',
-        github: '',
-        img: '',
-        description: '对网页用户行为进行监控、记录、重现。曾获航信公司内部「年度最具创意项目奖」。基于UI自动化的\n' +
-            '                                        Chrome 扩展应用。'
-    },
-    {
         name: "pagenote",
         github: 'https://addons.mozilla.org/zh-CN/firefox/addon/page-note/',
         img: 'https://img.shields.io/github/stars/rowthan/easyshare?color=lightgrey&label=%20page-note网页笔记&logo=github&style=flat-square',
-        description: '网页笔记，让任意网页具备标记对象、记录笔记的功能。0依赖的独立运行SDK，已发布至NPM。'
-    }
+        description: '网页笔记，让任意网页具备标记对象、记录笔记的功能。0依赖的独立运行SDK。'
+    },
+    // {
+    //     name: 'mginx个性化代理解决方案',
+    //     github: 'https://github.com/rowthan/mginx',
+    //     img: '',
+    //     description: 'Node.js 实现的反向代理解决方案，支持单入口多环境代理分发。支持自动环境部署、性能监控、数据分析等功能。'
+    // },
+    // {
+    //     name: 'CoPixel视觉校验工具',
+    //     github: 'https://copixel.bytedance.com',
+    //     img: '',
+    //     description: '前端开发对UI稿还原度校准工具，快速定位网页和UI稿的差异。超过400位字节跳动员工正在使用。2019年内部技术学院评选为「2019\n' +
+    //         '                                        最受欢迎服务」之一。已申请专利。'
+    // },
+    // {
+    //     name: 'auto-actor基于UI自动化',
+    //     github: '',
+    //     img: '',
+    //     description: '对网页用户行为进行监控、记录、重现。曾获航信公司内部「年度最具创意项目奖」。基于UI自动化的\n' +
+    //         '                                        Chrome 扩展应用。'
+    // }
 ]

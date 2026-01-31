@@ -1,67 +1,54 @@
 export const experience = [
     {
         time: '2024-2018',
-        company:'字节跳动 商业化',
+        company:'字节跳动',
         projects:[
-            {
-                title:'2019获得『追求极致-工作高标准奖』',
-            },
             {
                 title:'巨量引擎客户增长业务',
                 items:[
-                    '从零基于Taro开发用于广告客户自助的字节、微信小程序。<br/>处理过多个iOS、Android、APP之间的<a href="https://bytedance.feishu.cn/docs/doccncTc4yuExvjiBWTIJx3rYef">兼容性问题</a>',
-                  '提出多个bug、需求，推动字节小程序生态改进',
-                  '打造了智能广告投放数据监控系统。',
-                  '开发lark机器人，处理日常即时通知、监控问题；'
+                  '开发促活拉新落地页，含抽奖、转盘、扭蛋机、刮刮卡等动效实现。',
+                  '基于Taro开发字节、微信小程序。处理推动完善过多个<a link="https://bytedance.feishu.cn/docs/doccncTc4yuExvjiBWTIJx3rYef">兼容性问题</a>，文档受到字节小程序官方推荐。',
+                  '开发Lark机器人，实现处理日常即时通知、监控问题；',
+                  '利用 TypeScript 构建了前、后端代码自动生成的解决方案，保障前后端的接口一致性。'
                 ]
             },
             {
-                title:'创作者变现渠道：<a href="https://star.toutiao.com" target=\'_blank\'>星图/即合</a>、<a href="https://creatormarketplace.tiktok.com" target=\'_blank\'>星图国际化</a>、' +
+                title:'曾获『追求极致-工作高标准奖』',
+                items:[
+                    '<a link="https://bytedance.feishu.cn/docs/doccnTBoqvDvsXiqVQgayKjAJ0e">优化国际化站点</a> ，首屏FCP 由4.6s 将至 0.7s',
+                    '开发对UI稿还原度<a href="https://copixel.bytedance.com/" target="_blank">CoPixel校对工具</a>，被技术学院评选为「2019 最受欢迎服务」之一。已申请专利。'
+                ]
+            },
+            {
+                title:'参与开发 AD 相关平台：<a href="https://star.toutiao.com" target=\'_blank\'>星图/即合</a>、<a href="https://creatormarketplace.tiktok.com" target=\'_blank\'>星图国际化</a>、' +
                     '<a href="https://ad.toutiao.com" target=\'_blank\'>头条广告投放平台</a>',
                 items:[
-                  '基于echarts数据可视化，针对各项监控数据、指标图表化。基于Vue-i18n多语种优化方案实现。',
-                  '负责广告创意生成，图片、文案自动化生成。',
-                  '基于hook实现自动化部署测试环境流水线。',
-                  '<a href="https://bytedance.feishu.cn/docs/doccnTBoqvDvsXiqVQgayKjAJ0e">优化国际化站点</a> ，首屏FCP 由4.6s 将至 0.7s'
-                ]
-            }
-        ]
-    },
-    {
-        time: '2018-2016',
-        company:'中国民航信息网络 B2B',
-        projects:[
-            {
-                title:'17、18年先后评选为优秀员工、劳动模范',
-            },
-            {
-                title:'航司 B2B 销售平台',
-                items:[
-                    '负责来自各航司日常需求、bug修复、样式调整。通过CSS套件封装各航司样式，最终实现一套 HTML 骨架适应35家航空公司不同样式的需求。主要使用 jQuery.js、JSP、sprintMVC'
-                ]
-            },
-            {
-                title:'航司销售后台单页应用升级',
-                items:[
-                  '对业务开关、配置等数据采用浏览器端缓存+懒加载等优化手段，首屏加载速度提高 50%。',
-                  '负责页面国际化方案，支持中英韩等语种显示',
-                  '航司管理后台采用 Angular1.x+Require.js+Spring 技术体系。',
+                  '打造了Gitlab CI、hook实现自动化部署测试环境流水线。',
+                  '负责程序化广告创意创编交互。基于echarts数据可视化、基于Vue-i18n多语种优化方案实现。',
+                  '实现了前端多个测试环境的自动化部署，<a href="https://github.com/rowthan/mginx-demo?tab=readme-ov-file">访问分流系统</a>。'
                 ]
             }
         ],
-        moreProject:[
+        moreProject:[]
+    },
+    {
+        time: '2018-2016',
+        company:'中国民航信息网络',
+        projects:[
             {
-                title:'自动化投产系统',
+                title:'17、18年先后评选为优秀员工、劳动模范',
                 items:[
-                  'springBoot +  Ansible + React.js',
-                  '负责前端框架搭建，整体代码结构拆分：抽离可复用组件，业务功能颗粒度拆分。'
-                ],
+                    '基于 Ansible 实现了自动化上线平台。开发浏览器插件，实现了基于UI的自动化测试，获得「年度最具创意项目奖」。',
+                    '在项目组内推广 Git 替换 SVN 系统, 并推动 Git-CI 持续集成，通过与 Jenkins 协同，构建从代码提交到打包上线的规范工作流水线体系。',
+                    '推动各类自动化测试手段在项目组中使用：puppetter、fitness、gauge 等。',
+                  ],
             },
             {
-                title:'其他贡献',
+                title:'<a href="https://cab2b.travelsky.com.cn/">航司 B2B 销售前台</a>、后台',
                 items:[
-                  '在项目组内推广Git, 并推动 Git-CI 持续集成，通过与 Jenkins 协同，构建从代码提交到打包上线的规范工作流水线体系。',
-                  '推动各类自动化测试手段在项目组中使用：puppetter、fitness、gauge 等。根据不同项目采用合适测试手段。'
+                    '通过CSS变量套件封装各航司样式，最终实现一套 HTML 骨架适应35家航空公司样式的需求。',
+                    '负责页面国际化方案，支持中英韩等多语种显示',
+                    '牵头负责销售后台从 JSP 系统（jQuery.js、JSP、sprintMVC）到前端单页应用（Angular1.x+Require.js+Spring）的迁移。'
                 ]
             },
         ]
