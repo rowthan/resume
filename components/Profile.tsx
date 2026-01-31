@@ -2,11 +2,16 @@ import qrCodePrint from "../img/qrcode.png";
 import Image from "next/image";
 import { profile } from "@/data/profile";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
+
+// 使用 useSearchParams 的子组件
+function ProfileTitle() {
+    const name = useSearchParams().get('name');
+    return <h1 style={{fontSize:"25px"}}>{name || '求职岗位'}</h1>;
+}
 
 export default function Profile() {
     const { contacts } = profile
-    // 从URL中获取参数 name
-    const name = useSearchParams().get('name');
     
     return (
         <nav className="basic-info">
@@ -14,7 +19,9 @@ export default function Profile() {
             <Image className="onlyprint" src={qrCodePrint} alt="扫描二维码" width="80" height="80"/>
             <Image className="noprint" src={qrCodePrint} alt="rowthan" width="80" height="80"/>
             <div style={{padding:"0 20px"}}>
-              <h1 style={{fontSize:"25px"}}>{name || '求职岗位'}</h1>
+              <Suspense fallback={<h1 style={{fontSize:"25px"}}>求职岗位</h1>}>
+                <ProfileTitle />
+              </Suspense>
               <div style={{lineHeight:'24px'}}>前端工程师</div>
             </div>
           </div>
@@ -26,7 +33,7 @@ export default function Profile() {
             <ul>
                 {
                     contacts.map((contact)=>(
-                        <li className={contact.className||''} key={contact.name}>
+                        <li className={(contact as any).className || ''} key={contact.name}>
                             {
                                 contact.link ?
                                     <a href={contact.link} target={'_blank'}>{contact.name}</a>:

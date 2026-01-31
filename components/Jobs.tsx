@@ -6,8 +6,9 @@ import {experience} from "@/data/experience";
 interface Props {
     children?: ReactNode;
 }
+interface ProjectObject {title: string, items:string[]}
 
-function ProjectItem(props: {project:{title: string, items:string[]}}) {
+function ProjectItem(props: {project:ProjectObject}) {
     const {project} = props
     return(
         <dl key={project.title}>
@@ -54,7 +55,7 @@ export default function Jobs(props: Props) {
                                     exp.moreProject && exp.moreProject.length > 0 &&
                                     <ShowMore id='more-project'>
                                         {
-                                            exp.moreProject.map((project) => (
+                                            exp.moreProject.map((project: ProjectObject) => (
                                                 <ProjectItem key={project.title} project={project} />
                                             ))
                                         }
