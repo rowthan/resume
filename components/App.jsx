@@ -37,7 +37,7 @@ class App extends Component{
     render(){
       const state = this.state;
       return(
-        <div className={`${state.revert?"revert":""} container`}>
+        <div className={`${state.revert?"revert":""} root-container`}>
           <div className="resume-container">
             <Profile />
             <Skill />

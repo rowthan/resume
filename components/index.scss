@@ -32,11 +32,12 @@ img{
     box-sizing: border-box;
 }
 
-.container{
+.root-container{
   position: relative;
   margin: 0 auto;
+  background-color: red;;
 }
-.container.revert{
+.root-container.revert{
   .resume-container{
     transform: rotateY(180deg);
   }
@@ -57,7 +58,7 @@ img{
     top:0;
     left: 0;
     width:100%;
-    padding: 5px 10px;
+    padding: 16px 36px;
     box-shadow: 4px 4px 8px 0px #b5b3b3;
     background: #fff;
     transition:0.6s;
@@ -66,7 +67,7 @@ img{
     backface-visibility:hidden;
 }
 
-// body:hover .container{transform:rotateY(180deg);}
+// body:hover .root-container{transform:rotateY(180deg);}
 .basic-info{
     display: flex;
     flex-wrap: wrap;
@@ -406,6 +407,7 @@ input.expander-state{
   }
   a{
     color: $main-color;
+    text-decoration: none;
   }
   a.ellipsis-expander {
     display: none !important;
@@ -470,7 +472,7 @@ input.expander-state{
 //}
 // 电脑设备
 @media (min-width: 900px) {
-    .container {
+    .root-container {
         width: 850px;
     }
     .resume-container{
@@ -498,5 +500,8 @@ input.expander-state{
 @media print{
   .skills li>a{
     width: 140px !important;
+  }
+  .root-container{
+    width: 100%;
   }
 }

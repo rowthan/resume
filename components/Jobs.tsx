@@ -7,6 +7,25 @@ interface Props {
     children?: ReactNode;
 }
 
+function ProjectItem(props: {project:{title: string, items:string[]}}) {
+    const {project} = props
+    return(
+        <dl key={project.title}>
+            <dt dangerouslySetInnerHTML={{__html: project.title}}>
+            </dt>
+            <dd>
+                <ol>
+                    {
+                        (project.items || []).map((item,index) => (
+                            <li key={index} dangerouslySetInnerHTML={{__html: item}}></li>
+                        ))
+                    }
+                </ol>
+            </dd>
+        </dl>
+    )
+}
+
 export default function Jobs(props: Props) {
     const {children} = props;
 
@@ -28,39 +47,15 @@ export default function Jobs(props: Props) {
                             <div className="projects">
                                 {
                                     exp.projects.map((project) => (
-                                        <dl key={project.title}>
-                                            <dt dangerouslySetInnerHTML={{__html: project.title}}>
-                                            </dt>
-                                            <dd>
-                                                <ol>
-                                                    {
-                                                        (project.items || []).map((item,index) => (
-                                                            <li key={index} dangerouslySetInnerHTML={{__html: item}}></li>
-                                                        ))
-                                                    }
-                                                </ol>
-                                            </dd>
-                                        </dl>
+                                        <ProjectItem key={project.title} project={project} />
                                     ))
                                 }
                                 {
-                                    exp.moreProject &&
+                                    exp.moreProject && exp.moreProject.length > 0 &&
                                     <ShowMore id='more-project'>
                                         {
                                             exp.moreProject.map((project) => (
-                                                <dl key={project.title}>
-                                                    <dt dangerouslySetInnerHTML={{__html: project.title}}>
-                                                    </dt>
-                                                    <dd>
-                                                        <ol>
-                                                            {
-                                                                (project.items || []).map((item,index) => (
-                                                                    <li key={index} dangerouslySetInnerHTML={{__html: item}}></li>
-                                                                ))
-                                                            }
-                                                        </ol>
-                                                    </dd>
-                                                </dl>
+                                                <ProjectItem key={project.title} project={project} />
                                             ))
                                         }
                                     </ShowMore>
