@@ -6,7 +6,7 @@ import {experience} from "@/data/experience";
 interface Props {
     children?: ReactNode;
 }
-interface ProjectObject {title: string, items:string[]}
+interface ProjectObject {title: string, items?:string[]}
 
 function ProjectItem(props: {project:ProjectObject}) {
     const {project} = props
