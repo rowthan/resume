@@ -2,9 +2,11 @@ import qrCodePrint from "../img/qrcode.png";
 import Image from "next/image";
 import { profile } from "@/data/profile";
 import { useSearchParams } from "next/navigation";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
+import {QRCodeCanvas} from "qrcode.react";
 
-// 使用 useSearchParams 的子组件
+
+
 function ProfileTitle() {
     const name = useSearchParams().get('name');
     return <h1 style={{fontSize:"25px"}}>{name || '求职岗位'}</h1>;
@@ -12,12 +14,15 @@ function ProfileTitle() {
 
 export default function Profile() {
     const { contacts } = profile
+    const [location,setLocation] = useState<string>('');
+    useEffect(function () {
+      setLocation(window.location.href);
+    },[])
     
     return (
         <nav className="basic-info">
           <div className="left" style={{}}>
-            <Image className="onlyprint" src={qrCodePrint} alt="扫描二维码" width="80" height="80"/>
-            <Image className="noprint" src={qrCodePrint} alt="rowthan" width="80" height="80"/>
+            <QRCodeCanvas value={location} fgColor={"#545454"} size={76} />
             <div style={{padding:"0 20px"}}>
               <Suspense fallback={<h1 style={{fontSize:"25px"}}>求职岗位</h1>}>
                 <ProfileTitle />

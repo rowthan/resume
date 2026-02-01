@@ -1,4 +1,5 @@
 import {projects} from "@/data/projects";
+import { ShowMore } from "./ShowMore";
 
 interface Project {
     name: string
@@ -11,27 +12,38 @@ export default function Projects() {
     return (
         <section className={'project-items'}>
             {
-                projects.map((item) => (
-                    <ProjectItem key={item.name} name={item.name} github={item.github} img={item.img}
-                                 description={item.description}/>
+                projects.slice(0,2).map((item) => (
+                    <ProjectItem key={item.name}  project={item} />
                 ))
             }
+            {
+                projects.length > 2 && 
+                <ShowMore id='more-projects'>
+                {
+                    projects.slice(2).map((item) => (
+                        <ProjectItem key={item.name}  project={item} />
+                    ))
+                }
+                </ShowMore>
+            }
+            
         </section>
     );
 }
 
 
-function ProjectItem(props: Project) {
-    const {img, github, description, name} = props
+function ProjectItem(props: {project: Project}) {
+    const {img, github, description, name} = props.project
     return (
-        <div className="project-item">
+        <div className="project-item inline-flex">
             <div className="inner-item">
-                <div>
-                    <a className="rep-name" href={github}>
+                {/* <div>
+                    
+                </div> */}
+                <div className="meta project-desc">
+                    <a className="rep-name mr-2" href={github}>
                         {img ? <img alt={name} src={img}/> : <span className={'px-1.5'}>{name}</span>}
                     </a>
-                </div>
-                <div className="meta project-desc">
                     {description}
                 </div>
             </div>

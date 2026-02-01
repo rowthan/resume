@@ -12,8 +12,11 @@ function ProjectItem(props: {project:ProjectObject}) {
     const {project} = props
     return(
         <dl key={project.title}>
-            <dt dangerouslySetInnerHTML={{__html: project.title}}>
-            </dt>
+            {
+                project.title && 
+                <dt dangerouslySetInnerHTML={{__html: project.title}}>
+                </dt>
+            }
             <dd>
                 <ol>
                     {
@@ -66,7 +69,7 @@ export default function Jobs(props: Props) {
                     ))
                 }
                 <li className='project-container'>
-                    <div><strong className='company'>个人项目</strong></div>
+                    <div><strong className='company'>开源项目</strong></div>
                     <Projects/>
                 </li>
             </ul>
