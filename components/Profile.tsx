@@ -1,6 +1,5 @@
-import qrCodePrint from "../img/qrcode.png";
-import Image from "next/image";
-import { profile } from "@/data/profile";
+'use client'
+// import profile from "@/data/profile.json";
 import { useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 import {QRCodeCanvas} from "qrcode.react";
@@ -12,8 +11,12 @@ function ProfileTitle() {
     return <h1 style={{fontSize:"25px"}}>{name || '求职岗位'}</h1>;
 }
 
-export default function Profile() {
-    const { contacts } = profile
+interface ProfileInfo {
+  contacts: {link: string,name: string}[]
+}
+
+export default function Profile(props:{profile: ProfileInfo}) {
+    const contacts = props.profile?.contacts || [];
     const [location,setLocation] = useState<string>('');
     useEffect(function () {
       setLocation(window.location.href);
@@ -22,8 +25,13 @@ export default function Profile() {
     return (
         <nav className="basic-info">
           <div className="left" style={{}}>
-            <QRCodeCanvas value={location} fgColor={"#545454"} size={76} />
-            <div style={{padding:"0 20px"}}>
+            <div className="flex items-center">
+              <QRCodeCanvas value={location} fgColor={"#545454"} size={76} />
+              <div className="text-[12px] [writing-mode:vertical-rl]">
+                扫码在线查看
+              </div>
+            </div>
+            <div className="px-9">
               <Suspense fallback={<h1 style={{fontSize:"25px"}}>求职岗位</h1>}>
                 <ProfileTitle />
               </Suspense>

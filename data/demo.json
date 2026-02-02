@@ -1,0 +1,139 @@
+{
+  "skills": [
+    {
+      "title": "H5、CSS3、小程序",
+      "description": "熟练使用 HTML5 新特性、擅长优化DOM结构，CSS 动画。熟悉微信、字节小程序开发。有多款小程序开发经验，累计用户超百万。"
+    },
+    {
+      "title": "TypeScript&Node.js",
+      "description": "擅长 TypeScript，面向对象编程。熟悉 BFF 编程、服务端渲染。"
+    },
+    {
+      "title": "React、Vue",
+      "description": "熟悉前端框架工作原理、常用生态圈。熟练应用主流框架，Tailwind、Next.js、Nuxt.js等"
+    },
+    {
+      "title": "构建工具",
+      "description": "熟练Webpack、Gulp，CI等工具，精通构建前端工程、流水线、编写插件提升工作效率。精通 <a target='_blank' href=\"https://juejin.cn/post/7600326947505504308\">Git</a>、pipeline/Jenkins持续集成。<a target='_blank' href='https://microsoftedge.microsoft.com/addons/detail/ablhdlecfphodoohfacojdngdfkgneaa' link='https://chromewebstore.google.com/detail/hpekbddiphlmlfjebppjhemobaopekmp?utm_source=resume'>浏览器插件发烧友</a>"
+    }
+  ],
+  "jobs": [
+    {
+      "time": "2024-",
+      "company": "个人项目",
+      "projects": [
+        {
+          "title": " <a href=\"https://pagenote.cn\" target=\"_blank\">PAGENOTE</a>，一款浏览器标记插件，累计用户超过10万。"
+        },
+        {
+          "title": " Web Shortcuts。浏览器版的“Apple 快捷指令”，实现脚本化编程，适用于远程代码下发、程序分享。"
+        }
+      ]
+    },
+    {
+      "time": "2024-2018",
+      "company": "字节跳动",
+      "projects": [
+        {
+          "title": "曾获『追求极致-工作高标准奖』",
+          "items": [
+            "<a link=\"https://bytedance.feishu.cn/docs/doccnTBoqvDvsXiqVQgayKjAJ0e\" target=\"_blank\">优化国际化站点</a> ，首屏FCP 由4.6s 将至 0.7s",
+            "开发对UI稿还原度<a href=\"https://copixel.bytedance.com/\" target=\"_blank\">CoPixel校对工具</a>，被技术学院评选为「2019 最受欢迎服务」之一，已申请专利。"
+          ]
+        },
+        {
+          "title": "巨量引擎客户增长业务",
+          "items": [
+            "开发促活拉新落地页，含抽奖、转盘、扭蛋机、刮刮卡等动效实现。",
+            "基于Taro开发字节、微信小程序。处理推动完善过多个<a link=\"https://bytedance.feishu.cn/docs/doccncTc4yuExvjiBWTIJx3rYef\">兼容性问题</a>，文档受到字节小程序官方推荐。",
+            "开发Lark机器人，实现处理日常即时通知、监控问题；",
+            "利用 TypeScript、IDL 构建了前后端代码自动生成的解决方案，保障前后端的接口一致性。"
+          ]
+        },
+        {
+          "title": "参与开发 AD 相关平台：<a href=\"https://star.toutiao.com\" target=\"_blank\">星图/即合</a>、<a href=\"https://creatormarketplace.tiktok.com\" target=\"_blank\">星图国际化</a>、<a href=\"https://ad.toutiao.com\" target=\"_blank\">头条广告投放平台</a>",
+          "items": [
+            "负责程序化广告创意创编交互。基于echarts数据可视化、基于Vue-i18n多语种优化方案实现。",
+            "实现了前端多个测试环境的自动化部署，<a href=\"https://github.com/rowthan/mginx-demo?tab=readme-ov-file\" target=\"_blank\">访问分流系统</a>。"
+          ]
+        }
+      ],
+      "moreProject": []
+    },
+    {
+      "time": "2018-2016",
+      "company": "中国民航信息网络",
+      "projects": [
+        {
+          "title": "17、18年先后评选为优秀员工、劳动模范",
+          "items": [
+            "基于 Ansible 实现了自动化上线平台。实现了基于UI的自动化测试，获得「年度最具创意项目奖」。",
+            "推动 Git 替换 SVN 系统, 搭建 Git-CI 持续集成，与 Jenkins 协同，实现自动化发布流水线。",
+            "推动各类自动化测试手段在项目组中使用：puppetter、fitness、gauge 等。"
+          ]
+        },
+        {
+          "title": "<a href=\"https://cab2b.travelsky.com.cn/\" target=\"_blank\">航司 B2B 销售前台</a>、后台",
+          "items": [
+            "实现一套代码适应35家航空公司多样式、多语种的需求。",
+            "牵头负责销售后台从 JSP 系统（jQuery.js、JSP、sprintMVC）到前端单页应用（Angular1.x）的迁移。"
+          ]
+        }
+      ]
+    }
+  ],
+  "profile": {
+    "name": "",
+    "jobName": "",
+    "avatar": "",
+    "printAvatar": "",
+    "contacts": [
+      {
+        "link": "mailto:rowthan@icloud.com",
+        "name": "rowthan@icloud.com"
+      },
+      {
+        "name": "Tel: 17611619330",
+        "link": ""
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "whats-element",
+      "github": "https://github.com/rowthan/whats-element",
+      "img": "https://img.shields.io/github/stars/rowthan/whats-element?color=lightgrey&label=%20whats-element&logo=github&style=flat-square",
+      "description": "为DOM元素计算唯一定位标识符，应用于埋点跟踪。"
+    },
+    {
+      "name": "pagenote",
+      "github": "https://microsoftedge.microsoft.com/addons/detail/ablhdlecfphodoohfacojdngdfkgneaa",
+      "img": "https://img.shields.io/github/stars/rowthan/easyshare?color=lightgrey&label=%20page-note网页笔记&logo=github&style=flat-square",
+      "description": "网页笔记，让任意网页具备标记对象、记录笔记的功能。0依赖的独立运行SDK。"
+    },
+    {
+      "name": "mginx个性化代理解决方案",
+      "github": "https://github.com/rowthan/mginx",
+      "img": "",
+      "description": "Node.js 实现的反向代理解决方案，支持单入口多环境代理分发。支持自动环境部署、性能监控、数据分析等功能。"
+    },
+    {
+      "name": "CoPixel视觉校验工具",
+      "github": "https://copixel.bytedance.com",
+      "img": "",
+      "description": "前端开发对UI稿还原度校准工具，快速定位网页和UI稿的差异。超过400位字节跳动员工正在使用。2019年内部技术学院评选为「2019 最受欢迎服务」之一。已申请专利。"
+    },
+    {
+      "name": "auto-actor基于UI自动化",
+      "github": "",
+      "img": "",
+      "description": "对网页用户行为进行监控、记录、重现。曾获航信公司内部「年度最具创意项目奖」。基于UI自动化的 Chrome 扩展应用。"
+    }
+  ],
+  "education":{
+    "school":"云南大学（本科）、软件工程系",
+    "time":"[2012-2016]",
+    "detail":"主修 C语言、Java、多媒体数据库、数据结构、计算机图形学、软件工程、计算机网络原理。",
+    "more":"曾获得校三好学生、校级优秀志愿者、五四青年表彰。"
+  }
+}

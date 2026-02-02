@@ -1,10 +1,11 @@
-import {type ReactNode} from 'react';
 import {ShowMore} from "@/components/ShowMore";
 import Projects from "@/components/Projects";
-import {experience} from "@/data/experience";
 
-interface Props {
-    children?: ReactNode;
+interface Job {
+    time: string,
+    company: string,
+    projects: ProjectObject[],
+    moreProject: ProjectObject[],
 }
 interface ProjectObject {title: string, items?:string[]}
 
@@ -30,9 +31,12 @@ function ProjectItem(props: {project:ProjectObject}) {
     )
 }
 
-export default function Jobs(props: Props) {
-    const {children} = props;
+export default async function Jobs(props:{jobs: Job[]}) {
 
+    const experience: Job[] = props.jobs || [];
+    if(!experience.length){
+        return null;
+    }
     return (
         <section>
             <header className="title">工作经验</header>
@@ -68,10 +72,6 @@ export default function Jobs(props: Props) {
                         </li>
                     ))
                 }
-                <li className='project-container'>
-                    <div><strong className='company'>开源项目</strong></div>
-                    <Projects/>
-                </li>
             </ul>
         </section>
     );

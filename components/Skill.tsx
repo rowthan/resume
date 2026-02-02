@@ -1,12 +1,17 @@
-import {skills} from "@/data/skills";
 
-export default function Skill() {
+interface SkillInfo {
+    title: string,
+    description: string
+}
+
+export default async function Skill(props:{skills: SkillInfo[]}) {
+
     return (
         <section >
           <header className="title">技能优势</header>
           <ul className="skills">
-              {
-                  skills.map((skill)=>(
+            {
+                  props.skills.map((skill)=>(
                       <li key={skill.title}>
                           <a href="">
                               {skill.title}

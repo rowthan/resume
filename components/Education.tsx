@@ -1,22 +1,35 @@
 import {type ReactNode} from 'react';
+import { ShowMore } from './ShowMore';
 
 interface Props {
     children?: ReactNode;
+    education:{
+        school?:string,
+        time?: string,
+        detail?: string,
+        more?: string,
+    }
 }
 
 export default function Education(props: Props) {
-    const {children} = props;
+    const {education = {}} = props;
+    if(!education.school){
+        return null;
+    }
     return (
         <section>
             <header className="title">教育背景</header>
             <ul className="education">
                 <li className='education-item'>
-                    <div>本科 云南大学 软件工程系 <span className="">[2012-2016]</span> </div>
+                    <div>{education?.school} <span className="">{education?.time}</span> </div>
                     <div className="meta">
-                        主修 C语言、Java、多媒体数据库、数据结构、计算机图形学、软件工程、计算机网络原理。
-                        {/*<ShowMore noneAni>*/}
-                        {/*  曾获得校三好学生、校级优秀志愿者、五四青年表彰。*/}
-                        {/*</ShowMore>*/}
+                        {education?.detail}
+                        {
+                            education?.more && 
+                            <ShowMore id='edu' noneAni>
+                                {education?.more}
+                            </ShowMore>
+                        }
                     </div>
                 </li>
             </ul>
