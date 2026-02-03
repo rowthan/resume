@@ -1,7 +1,8 @@
 
 interface SkillInfo {
     title: string,
-    description: string
+    description: string,
+    href?: string
 }
 
 export default async function Skill(props:{skills: SkillInfo[]}) {
@@ -13,7 +14,7 @@ export default async function Skill(props:{skills: SkillInfo[]}) {
             {
                   props.skills.map((skill)=>(
                       <li key={skill.title}>
-                          <a href="">
+                          <a href={skill.href || '#/'}>
                               {skill.title}
                           </a>
                           <span dangerouslySetInnerHTML={{__html: skill.description}}>
